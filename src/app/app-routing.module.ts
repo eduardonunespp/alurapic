@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PhotoFormComponent, PhotoListComponent } from './photos'
+import { PhotoFormComponent, PhotoListComponent } from './photos';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+// import { PhotoListResolver } from './photos/photo-list/phot-list.resolver';
 
 const routes: Routes = [
   { path: 'user/:userName', component: PhotoListComponent },
   { path: 'p/add', component: PhotoFormComponent },
-  { path: '**', component: NotFoundComponent}
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

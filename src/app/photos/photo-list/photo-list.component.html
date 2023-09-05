@@ -11,5 +11,6 @@
   </form>
 </div>
 
+<ap-photos [photos]="photos | filterByDescription : filter.value || ''" />
 
-<ap-photos [photos]="photos | filterByDescription: filter.value || '' " />
+<ap-load-button (click)="load" [hasMore]="hasMore"  />
